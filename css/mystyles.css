@@ -7,7 +7,7 @@
     margin-bottom: 40px;
     z-index: 900;
 }
-.demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+.mdl-layout__header-row .mdl-navigation__link:last-of-type  {
     padding-right: 0;
 }
 .page-background {
