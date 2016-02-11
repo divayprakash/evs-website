@@ -10,6 +10,7 @@ Steps to follow :
 - Create branch for each separate piece of work
   - If fixing bug, name the branch as bugname_fix
   - If adding feature, name the branch as featurename_feature
+  - If working on enhancement, name the branch as enhancementname_enhancement
 - Work!
 - Commit your chages to this branch
   - Write good COMMIT message
