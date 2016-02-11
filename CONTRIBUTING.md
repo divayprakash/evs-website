@@ -1,4 +1,4 @@
-IMPORTANT! 
+# IMPORTANT! 
 
 Please follow the guide at the link given below to contribute to the website code:
 
