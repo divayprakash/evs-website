@@ -1,8 +1,6 @@
 # IMPORTANT! 
 
-Please follow the guide at the link given below to contribute to the website code:
-
-https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/
+Please follow the guide [here](https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/) to contribute to the website code:
 
 Steps to follow :
 - Fork the project & clone locally
