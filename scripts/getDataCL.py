@@ -85,18 +85,3 @@ try:
 	appendInFile(141,148,cl_speed)
 except Exception as e:
 	print "Something went wrong ",(e)
-
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
