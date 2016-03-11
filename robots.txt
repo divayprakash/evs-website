@@ -1,4 +1,4 @@
-Sitemap: http://evs123.esy.es/sitemap-2.xml
+Sitemap: http://evs123.esy.es/sitemap.xml
 User-agent: *
 Disallow: /scripts/
 Disallow: /process/
