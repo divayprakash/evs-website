@@ -2,6 +2,8 @@
 engines:
   csslint:
     enabled: true
+    exclude_fingerprints:
+    - beed1e710ac074c6ad8e516ce0d18ec6
   duplication:
     enabled: true
     config:
@@ -20,7 +22,4 @@ ratings:
   - "**.txt"
   - "**.xml"
 exclude_paths:
-  - "css/"
-  - "js/"
-  - "images/"
-  - "scripts/"
+  - "assets/"
