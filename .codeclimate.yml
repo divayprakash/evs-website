@@ -20,7 +20,4 @@ ratings:
   - "**.txt"
   - "**.xml"
 exclude_paths:
-  - "css/"
-  - "js/"
-  - "images/"
-  - "scripts/"
+  - "assets/"
