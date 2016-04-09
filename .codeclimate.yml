@@ -25,4 +25,4 @@ ratings:
   - "**.xml"
 exclude_paths:
   - "assets/"
-  - "process/js/custom.js"
+  - "process/js/"
