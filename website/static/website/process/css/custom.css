@@ -1,0 +1,60 @@
+#view-source {
+  position: fixed;
+  display: block;
+  right: 0;
+  bottom: 0;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  z-index: 900;
+}
+
+.mdl-layout__header-row .mdl-navigation__link:last-of-type {
+  padding-right: 0;
+}
+
+.page-background {
+  background: url(../../images/page-background.jpg) center;
+}
+
+.welcome-card-background {
+  height: 300px;
+  background: url(../../images/welcome_card.jpg) bottom left;
+}
+
+.delhi-card-background {
+  height: 300px;
+  background: url(../../images/delhi_card.jpg) center;
+}
+
+.iiitd-card-background {
+  height: 300px;
+  background: url(../../images/iiitd_card.jpg) top center;
+}
+
+.yp-card-background {
+  height: 300px;
+  background: url(../../images/yp_card.jpg) center left;
+  background-repeat: no-repeat;
+}
+
+.rai-card-background {
+  height: 300px;
+  background: url(../../images/rai_card.jpg) right;
+  background-repeat: no-repeat;
+}
+
+.mdl-card__actions-special {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.mdl-card__actions-special > .mdl-button--icon {
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+.error-404-background {
+  background: url(../../images/404.png) center;
+  background-repeat: no-repeat;
+}
