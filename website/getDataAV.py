@@ -31,7 +31,7 @@ def parser(fault):
 
 
 
-def appendInFile(start,end,parameter):
+def appendInFile(start,end):
 	i=start  
 	while i<end:
 
@@ -87,16 +87,16 @@ try:
 	#print len(E)
 	#print E[44].getText()
 	DATA=[]
-	appendInFile(20,27,"Ammonia")
-	appendInFile(27,34,"benzene")
-	appendInFile(34,41,"Carbon monoxide")
-	appendInFile(41,48,"Nitrogen dioxide")
-	appendInFile(48,55,"Nitorgen oxide")
-	appendInFile(55,62,"oxides of Nitrogen")
-	appendInFile(62,69,"ozone")
-	appendInFile(69,76,"xylene")
-	appendInFile(76,83,"Sulphur dioxide")
-	appendInFile(83,90,"toluene")
+	appendInFile(20,27)
+	appendInFile(27,34)
+	appendInFile(34,41)
+	appendInFile(41,48)
+	appendInFile(48,55)
+	appendInFile(55,62)
+	appendInFile(62,69)
+	appendInFile(69,76)
+	appendInFile(76,83)
+	appendInFile(83,90)
 	#print E[107].getText()
 	# appendInFile(100,107,"temprature")
 	# appendInFile(107,114,"Barometric pressure")

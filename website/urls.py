@@ -10,7 +10,7 @@ urlpatterns=[
     url(r'^issue/$', views.issue, name='issue'),
     url(r'^detail/dataAnand/$', views.AnandVihar, name='AnandVihar'),
     url(r'^detail/dataMandir/$', views.MandirMarg, name='MandirMarg'),
-    url(r'^detail/dataIGI/$', views.IGIAirport, name='IGIAirport'),
+    url(r'^detail/dataRKPuram/$', views.RKPuram, name='RKPuram'),
     url(r'^detail/dataPunjabi/$', views.PunjabiBagh, name='PunjabiBagh'),
     url(r'^detail/dataCivil/$', views.CivilLines, name='CivilLines'),
 

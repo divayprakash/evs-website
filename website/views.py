@@ -1,5 +1,5 @@
 from django.shortcuts import render,get_object_or_404
-import getDataAV
+import getDataAV,getDataCL,getDataPB,getDataMM,getDataRKP
 from django.http import HttpResponse
 from .models import Area,Pollutants
 
@@ -35,8 +35,8 @@ def AnandVihar(request):
 
 
 def MandirMarg(request):
-    DATA=getDataAV.DATA
-    a=Area.objects.get(pk=1)
+    DATA=getDataMM.DATA
+    a=Area.objects.get(pk=2)
     for data in DATA:
         a.pollutants_set.create(param=data[0],date=data[1],time=data[2], concen=data[3], standard=data[4])
         print data[0], " addded into database"
@@ -44,9 +44,9 @@ def MandirMarg(request):
     return render(request,'website/data.html',context)
 
 
-def IGIAirport(request):
-    DATA=getDataAV.DATA
-    a=Area.objects.get(pk=1)
+def RKPuram(request):
+    DATA=getDataRKP.DATA
+    a=Area.objects.get(pk=4)
     for data in DATA:
         a.pollutants_set.create(param=data[0],date=data[1],time=data[2], concen=data[3], standard=data[4])
         print data[0], " addded into database"
@@ -55,8 +55,8 @@ def IGIAirport(request):
 
 
 def PunjabiBagh(request):
-    DATA=getDataAV.DATA
-    a=Area.objects.get(pk=1)
+    DATA=getDataPB.DATA
+    a=Area.objects.get(pk=6)
     for data in DATA:
         a.pollutants_set.create(param=data[0],date=data[1],time=data[2], concen=data[3], standard=data[4])
         print data[0], " addded into database"
@@ -65,8 +65,8 @@ def PunjabiBagh(request):
 
 
 def CivilLines(request):
-    DATA=getDataAV.DATA
-    a=Area.objects.get(pk=1)
+    DATA=getDataCL.DATA
+    a=Area.objects.get(pk=3)
     for data in DATA:
         a.pollutants_set.create(param=data[0],date=data[1],time=data[2], concen=data[3], standard=data[4])
         print data[0], " addded into database"
