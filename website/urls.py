@@ -8,6 +8,10 @@ urlpatterns=[
     url(r'^IIITD/$', views.IIITD, name='IIITD'),
     url(r'^profile/$', views.profile, name='profile'),
     url(r'^issue/$', views.issue, name='issue'),
-    url(r'^detail/data/$', views.AnandVihar, name='AnandVihar'),
+    url(r'^detail/dataAnand/$', views.AnandVihar, name='AnandVihar'),
+    url(r'^detail/dataMandir/$', views.MandirMarg, name='MandirMarg'),
+    url(r'^detail/dataRKPuram/$', views.RKPuram, name='RKPuram'),
+    url(r'^detail/dataPunjabi/$', views.PunjabiBagh, name='PunjabiBagh'),
+    url(r'^detail/dataCivil/$', views.CivilLines, name='CivilLines'),
 
 ]
