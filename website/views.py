@@ -30,8 +30,11 @@ def AnandVihar(request):
     for data in DATA:
         a.pollutants_set.create(param=str(data[0]),date=str(data[1]),time=str(data[2]), concen=str(data[3]), standard=str(data[4]))
         print str(data[2])+"H"
-    context={'DATA':DATA,};
-    return render(request,'website/data.html',context)
+    L=a.pollutants_set.all()
+    List=L[len(L)-10:len(L)-1]
+    cont={'List':List,}
+    context={'DATA':DATA,}
+    return render(request,'website/data.html',cont)
 
 
 def MandirMarg(request):
@@ -68,7 +71,11 @@ def CivilLines(request):
     DATA=getDataCL.DATA
     a=Area.objects.get(pk=3)
     for data in DATA:
-        a.pollutants_set.create(param=data[0],date=data[1],time=data[2], concen=data[3], standard=data[4])
+        a.pollutants_set.create(param=str(data[0]), date=str(data[1]), time=str(data[2]), concen=str(data[3]),
+                                standard=str(data[4]))
         print data[0], " addded into database"
+    #L = a.pollutants_set.all()
+    #List = L[len(L)-10:len(L)-1]
+    #cont = {'List': List,}
     context={'DATA':DATA,};
     return render(request,'website/data.html',context)
