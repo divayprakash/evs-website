@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data</title>
+</head>
+<body>
+        <ul>
+            {% for data in DATA %}
+                <li>{% for entry in data %}
+                    {{entry}}
+                {% endfor %}</li>
+            {% endfor %}
+        </ul>
+
+
+</body>
+</html>
