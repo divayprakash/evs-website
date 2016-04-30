@@ -26,18 +26,49 @@ def issue(request):
 
 def AnandVihar(request):
     DATA=getDataAV.DATA
-    #a=Area.objects.get(pk=1)
+    a=Area.objects.get(pk=1)
     for data in DATA:
-        #a.pollutants_set.create(param=data[0],date=data[1],time=data[2], concen=data[3], standard=data[4])
+        a.pollutants_set.create(param=str(data[0]),date=str(data[1]),time=str(data[2]), concen=str(data[3]), standard=str(data[4]))
         print str(data[2])+"H"
     context={'DATA':DATA,};
     return render(request,'website/data.html',context)
 
-# def AnandVihar(request):
-#     DATA=getDataAV.DATA
-#     a=Area.objects.get(pk=1)
-#     for data in DATA:
-#         a.pollutants_set.create(param=data[0],date=data[1],time=data[2], concen=data[3], standard=data[4])
-#         print data[0], " addded into database"
-#     context={'DATA':DATA,};
-#     return render(request,'website/data.html',context)
+
+def MandirMarg(request):
+    DATA=getDataAV.DATA
+    a=Area.objects.get(pk=1)
+    for data in DATA:
+        a.pollutants_set.create(param=data[0],date=data[1],time=data[2], concen=data[3], standard=data[4])
+        print data[0], " addded into database"
+    context={'DATA':DATA,};
+    return render(request,'website/data.html',context)
+
+
+def IGIAirport(request):
+    DATA=getDataAV.DATA
+    a=Area.objects.get(pk=1)
+    for data in DATA:
+        a.pollutants_set.create(param=data[0],date=data[1],time=data[2], concen=data[3], standard=data[4])
+        print data[0], " addded into database"
+    context={'DATA':DATA,};
+    return render(request,'website/data.html',context)
+
+
+def PunjabiBagh(request):
+    DATA=getDataAV.DATA
+    a=Area.objects.get(pk=1)
+    for data in DATA:
+        a.pollutants_set.create(param=data[0],date=data[1],time=data[2], concen=data[3], standard=data[4])
+        print data[0], " addded into database"
+    context={'DATA':DATA,};
+    return render(request,'website/data.html',context)
+
+
+def CivilLines(request):
+    DATA=getDataAV.DATA
+    a=Area.objects.get(pk=1)
+    for data in DATA:
+        a.pollutants_set.create(param=data[0],date=data[1],time=data[2], concen=data[3], standard=data[4])
+        print data[0], " addded into database"
+    context={'DATA':DATA,};
+    return render(request,'website/data.html',context)

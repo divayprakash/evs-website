@@ -50,7 +50,7 @@ def appendInFile(start,end,parameter):
 		SET.append(str(date))
 		SET.append(str(time))
 		SET.append(str(concen))
-		#SET.append(str(standard))
+		SET.append(str(standard))
 		#print SET
 
 		DATA.append(SET)
