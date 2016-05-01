@@ -1,16 +1,32 @@
 
 # Data of Civil lines
 place='civilLines'
-#filenames
+
 import requests,bs4
 import csv
+
+DATA=[]
+
+def parser2(fault):
+	l=len(fault)
+	i=0
+	while (i <= l-1):
+		if (fault[i] == "1" or fault[i] == "2" or fault[i] == "3" or fault[i] == "4"
+			or fault[i] == "5" or fault[i] == "6" or fault[i] == "7"
+			or fault[i] == "8" or fault[i] == "9" or fault[i] == "0"):
+			break
+		else:
+			i += 1
+	return fault[i:]
 
 
 def parser(fault):
 	l=len(fault)
 	i=l-1
 	while(i>=0):
-		if(fault[i]=="1" or fault[i]=="2"  or fault[i]=="4" or fault[i]=="5" or fault[i]=="6" or fault[i]=="7" or fault[i]=="8" or fault[i]=="9" or fault[i]=="0"):
+		if(fault[i]=="1" or fault[i]=="2"  or fault[i]=="4"
+		   or fault[i]=="5" or fault[i]=="6" or fault[i]=="7"
+		   or fault[i]=="8" or fault[i]=="9" or fault[i]=="0"):
 			break
 		else:
 			i-=1
@@ -24,17 +40,24 @@ def appendInFile(start,end):
 		param=E[i].getText()
 		date=E[i+1].getText()
 		time=E[i+2].getText()
-		concen=parser(E[i+3].getText().strip())
-		standard=parser(E[i+4].getText().strip())
-		SET.append(param)
-		SET.append(date)
-		SET.append(time)
-		SET.append(concen)
-		SET.append(standard)
+		concen=parser2(E[i+3].getText().strip())
+		standard=parser2(E[i+4].getText().strip())
+		concen=parser(concen)
+		standard=parser(standard)
+		print param
+		print date
+		print time
+		print concen
+		print standard
+		SET.append(str(param))
+		SET.append(str(date))
+		SET.append(str(time))
+		SET.append(str(concen))
+		SET.append(str(standard))
 		print SET
 		
 		#filename.writerow(SET)
-		#DATA.append(SET)
+		DATA.append(SET)
 		i+=7
 
 
@@ -64,7 +87,7 @@ try:
 	E=cluster.select('td')
 	#print len(E)
 	#print E[20].getText()
-	DATA=[]
+	#DATA=[]
 	appendInFile(20,27)
 	appendInFile(27,34)
 	appendInFile(34,41)
