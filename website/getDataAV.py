@@ -1,9 +1,6 @@
-
+import requests,bs4
 # Data of Anand Vihar
 place='av'
-#filenames
-import requests,bs4
-import csv
 
 
 def parser(fault):
@@ -56,30 +53,10 @@ def appendInFile(start,end):
 		DATA.append(SET)
 		i+=7
 
-
-
-#AV_ammonia=csv.writer(open("./data_files/AV/AV_ammonia.csv","a"))
-"""AV_benzene=csv.writer(open("../data_files/AV/AV_benzene.csv","a"))
-AV_Cmonoxide=csv.writer(open("../data_files/AV/AV_Cmonoxide.csv","a"))
-AV_Ndioxide=csv.writer(open("../data_files/AV/AV_Ndioxide.csv","a"))
-AV_Noxide=csv.writer(open("../data_files/AV/AV_Noxide.csv","a"))
-AV_oxidesN=csv.writer(open("../data_files/AV/AV_oxidesN.csv","a"))
-AV_ozone=csv.writer(open("../data_files/AV/AV_ozone.csv","a"))
-AV_xylene=csv.writer(open("../data_files/AV/AV_xylene.csv","a"))
-AV_Sdioxide=csv.writer(open("../data_files/AV/AV_Sdioxide.csv","a"))
-AV_toluene=csv.writer(open("../data_files/AV/AV_toluene.csv","a"))
-AV_Bpressure=csv.writer(open("../data_files/AV/AV_pressure.csv","a"))
-AV_temp=csv.writer(open("../data_files/AV/AV_temp.csv","a"))
-AV_humidity=csv.writer(open("../data_files/AV/AV_humidity.csv","a"))
-AV_PM10=csv.writer(open("../data_files/AV/AV_PM10.csv","a"))
-AV_PM25=csv.writer(open("../data_files/AV/AV_PM25.csv","a"))
-AV_Sradiation=csv.writer(open("../data_files/AV/AV_Sradiation.csv","a"))
-AV_VWS=csv.writer(open("../data_files/AV/AV_VWS.csv","a"))
-AV_HWS=csv.writer(open("../data_files/AV/AV_HWS.csv","a"))
-AV_direction=csv.writer(open("../data_files/AV/AV_direction.csv","a"))
-#AV_speed=csv.writer(open("../data_files/AV/AV_speed.csv","a"))"""
 exportFrom='http://www.dpccairdata.com/dpccairdata/display/'+place+'View15MinData.php'
 res=requests.get(exportFrom)
+
+
 try:
 	res.raise_for_status()
 	AVuster=bs4.BeautifulSoup(res.text,"lxml")
@@ -107,7 +84,7 @@ try:
 	# appendInFile(142,149,"Vertical wind speed")
 	# appendInFile(149,156,"Horizontal wind speed")
 	# appendInFile(156,163,"Wind direction")
-	#temp=DATA[0]
-	#print DATA[0][0]
+
+
 except Exception as e:
-	print "We are not able to connect to Server right now , PLEASE try again later"
+	print "[NOTE : WE ARE NOT ABLE TO CONNECT WITH SENSORS ]"
